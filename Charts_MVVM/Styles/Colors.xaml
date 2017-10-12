@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Charts_MVVM">
+
+    <Color x:Key="BackgroundLight">#eeeef2</Color>
+    <SolidColorBrush x:Key="BackgroundLightBrush" Color="{StaticResource BackgroundLight}"></SolidColorBrush>
+
+    <Color x:Key="BackgroundVeryLight">#ffffff</Color>
+    <SolidColorBrush x:Key="BackgroundVeryLightBrush" Color="{StaticResource BackgroundVeryLight}"></SolidColorBrush>
+
+    <Color x:Key="ForeGroundDark">#1e1e1e</Color>
+    <SolidColorBrush x:Key="ForeGroundDarkBrush" Color="{StaticResource ForeGroundDark}"></SolidColorBrush>
+
+    <Color x:Key="ForeGroundLight">#ffffff</Color>
+    <SolidColorBrush x:Key="ForeGroundLightBrush" Color="{StaticResource ForeGroundLight}"></SolidColorBrush>
+
+
+    <!-- Chart colors -->
+
+    <Color x:Key="ChartForeGroundLight">#666666</Color>
+    <SolidColorBrush x:Key="ChartForeGroundLightBrush" Color="{StaticResource ChartForeGroundLight}"></SolidColorBrush>
+
+    <Color x:Key="ChartForeGroundMidLight">#a6a6a6</Color>
+    <SolidColorBrush x:Key="ChartForeGroundMidLightBrush" Color="{StaticResource ChartForeGroundMidLight}"></SolidColorBrush>
+
+    <Color x:Key="ChartForeGroundVeryLight">#d6d6d6</Color>
+    <SolidColorBrush x:Key="ChartForeGroundVeryLightBrush" Color="{StaticResource ChartForeGroundVeryLight}"></SolidColorBrush>
+
+    <Color x:Key="ChartForeGroundLightBlue">#117dbb</Color>
+    <SolidColorBrush x:Key="ChartForeGroundLightBlueBrush" Color="{StaticResource ChartForeGroundLightBlue}"></SolidColorBrush>
+
+    <Color x:Key="ChartForeGroundVeryLightBlue">#d9eaf4</Color>
+    <SolidColorBrush x:Key="ChartForeGroundVeryLightBlueBrush" Color="{StaticResource ChartForeGroundVeryLightBlue}"></SolidColorBrush>
+
+</ResourceDictionary>

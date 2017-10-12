@@ -1,0 +1,54 @@
+﻿<Page x:Class="Charts_MVVM.ChartControlPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Charts_MVVM"
+      xmlns:oxy="http://oxyplot.org/wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="ChartControlPage">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Main tools -->
+        <Grid Grid.Row="0">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="300" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Deg file combobox -->
+
+            <ComboBox Style="{StaticResource ComboBox_Style1}" Grid.Column="1" Width="200" Height="22"  SelectedIndex="0" ItemsSource="{Binding Path=FolderItemList}" DisplayMemberPath="name"/>
+
+        </Grid>
+        
+        
+        
+        
+        <!-- Chart Control -->
+
+        <oxy:Plot  Style="{StaticResource oxyPlot_Style1}" Grid.Row="1" Title="{Binding ChartTitle}" Margin="20">
+
+            <oxy:Plot.Axes>
+                <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartYaxisTitle}" Position="Left"/>
+                <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartXaxisTitle}" Position="Bottom"/>
+            </oxy:Plot.Axes>
+
+            <oxy:Plot.Series>
+                <oxy:LineSeries Style="{StaticResource oxyLineSeries_Style1}" ItemsSource="{Binding Points}" Title="Dude"/>
+            </oxy:Plot.Series>
+            
+        </oxy:Plot>
+
+        
+
+    </Grid>
+</Page>
