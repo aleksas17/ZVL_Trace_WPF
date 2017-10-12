@@ -87,6 +87,7 @@
       <DependentUpon>FileDropPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sorting\NumberTextSort.cs" />
+    <Compile Include="Parcers\TextParcer.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />

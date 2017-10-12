@@ -33,6 +33,23 @@ namespace Charts_MVVM
 
         public static ObservableCollection<SourceItem> FolderItemList { get; set; }
 
+        /// <summary>
+        /// Combobox selected item
+        /// </summary>
+        private SourceItem _comboboxSelectedItem;
+        public SourceItem ComboboxSelectedItem
+        {
+            get { return _comboboxSelectedItem; }
+            set
+            {
+                //_comboboxSelectedItem = value;
+                // Clearing chart
+                //Points.Clear();
+                // Get data points from .s1p file, that we selected and apply it
+                Points = TextParcer.s1pParcer(value);
+            }
+        }
+
         #endregion
 
         #region Public Commands
@@ -70,13 +87,12 @@ namespace Charts_MVVM
 
         public void AddNewDataPoints()
         {
-            Points.Clear();
-            for (int i = 0; i < 20; i++)
-            {
-                Points.Add(new DataPoint(10 + i, i * 10));
-            }
+            //Points.Clear();
+            //for (int i = 0; i < 20; i++)
+            //{
+            //    Points.Add(new DataPoint(10 + i, i * 10));
+            //}
         }
-
 
     #endregion
 

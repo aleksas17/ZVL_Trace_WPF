@@ -26,7 +26,12 @@
 
             <!-- Deg file combobox -->
 
-            <ComboBox Style="{StaticResource ComboBox_Style1}" Grid.Column="1" Width="200" Height="22"  SelectedIndex="0" ItemsSource="{Binding Path=FolderItemList}" DisplayMemberPath="name"/>
+            <ComboBox Style="{StaticResource ComboBox_Style1}" 
+                      Grid.Column="1" Width="200" Height="22"  
+                      SelectedIndex="0" 
+                      ItemsSource="{Binding Path=FolderItemList}" 
+                      DisplayMemberPath="name"
+                      SelectedItem="{Binding ComboboxSelectedItem}" />
 
         </Grid>
         

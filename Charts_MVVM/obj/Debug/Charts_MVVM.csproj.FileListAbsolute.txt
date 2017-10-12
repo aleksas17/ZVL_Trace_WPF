@@ -34,3 +34,40 @@ C:\Users\LOGO\documents\visual studio 2017\Projects\Charts_MVVM\Charts_MVVM\bin\
 C:\Users\LOGO\documents\visual studio 2017\Projects\Charts_MVVM\Charts_MVVM\bin\Debug\OxyPlot.Wpf.xml
 C:\Users\LOGO\documents\visual studio 2017\Projects\Charts_MVVM\Charts_MVVM\obj\Debug\Styles\Charts.baml
 C:\Users\LOGO\documents\visual studio 2017\Projects\Charts_MVVM\Charts_MVVM\obj\Debug\Charts_MVVM.csprojResolveAssemblyReference.cache
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\Charts_MVVM.exe.config
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\Charts_MVVM.exe
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\Charts_MVVM.pdb
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.dll
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.Wpf.dll
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.pdb
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.xml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.Wpf.pdb
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\OxyPlot.Wpf.xml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\bin\Debug\System.Windows.Interactivity.xml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.csprojResolveAssemblyReference.cache
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Pages\ChartControlPage.g.cs
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Pages\FileDropPage.g.cs
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\MainWindow.g.cs
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\App.g.cs
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM_MarkupCompile.cache
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM_MarkupCompile.lref
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\App.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Pages\ChartControlPage.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Pages\FileDropPage.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\MainWindow.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\Charts.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\Buttons.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\Colors.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\ComboBoxes.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\Fonts.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Styles\Texts.baml
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.g.resources
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.Properties.Resources.resources
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.csproj.GenerateResource.Cache
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.csproj.CoreCompileInputs.cache
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.exe
+C:\Users\academy\Documents\GitHub\ZVL_Trace_WPF\Charts_MVVM\obj\Debug\Charts_MVVM.pdb
