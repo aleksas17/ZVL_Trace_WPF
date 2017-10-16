@@ -1,10 +1,12 @@
 ﻿using OxyPlot;
-using OxyPlot.Wpf;
+using OxyPlot.Annotations;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Input;
-using System.Windows.Threading;
 
 namespace Charts_MVVM
 {
@@ -16,6 +18,11 @@ namespace Charts_MVVM
         /// The window this view model controls
         /// </summary>
         private Page mPage;
+
+        /// <summary>
+        /// Combobox selected item
+        /// </summary>
+        private SourceItem _comboboxSelectedItem;
 
         #endregion
 
@@ -29,31 +36,34 @@ namespace Charts_MVVM
 
         public string ChartXaxisTitle { get; private set; } = "[Mhz]";
 
-        public static ObservableCollection<DataPoint> Points { get; private set; }
-
         public static ObservableCollection<SourceItem> FolderItemList { get; set; }
 
-        /// <summary>
-        /// Combobox selected item
-        /// </summary>
-        private SourceItem _comboboxSelectedItem;
-        public SourceItem ComboboxSelectedItem
-        {
-            get { return _comboboxSelectedItem; }
-            set
-            {
-                //_comboboxSelectedItem = value;
-                // Clearing chart
-                //Points.Clear();
-                // Get data points from .s1p file, that we selected and apply it
-                Points = TextParcer.s1pParcer(value);
-            }
-        }
+        public PlotModel ChartModel { get; set; }
 
         #endregion
 
         #region Public Commands
 
+        public SourceItem ComboboxSelectedItem
+        {
+            get { return _comboboxSelectedItem; }
+            set
+            {
+                _comboboxSelectedItem = value;
+                // Clearing chart series
+                ChartModel.Series.Clear();
+                // Get data points from .s1p file, that we selected and apply it
+                ChartModel.Series.Add(TextParcer.s1pParcer(_comboboxSelectedItem));
+                // Refresh chart
+                ChartModel.InvalidatePlot(true);
+                ChartModel.Series[0].MouseDown += (s, e) =>
+                {
+                    ChartModel.Subtitle = "Y value of nearest point in LineSeries: " +
+                        Math.Round(e.HitTestResult.NearestHitPoint.Y);
+                    ChartModel.InvalidatePlot(false);
+                };
+            }
+        }
 
         #endregion
 
@@ -66,10 +76,10 @@ namespace Charts_MVVM
         {
             mPage = page;
 
+            ChartModel = new PlotModel();
+            ChartModel = LineChart.CreateChart("Trace Graph Data", "[Mhz]", "[dB]");
             FolderItemList = new ObservableCollection<SourceItem>();
-
-            Points = new ObservableCollection<DataPoint>()
-            { new DataPoint(12, 14), new DataPoint(20, 26) };
+            
         }
 
         #endregion
@@ -85,16 +95,7 @@ namespace Charts_MVVM
             list.ForEach(FolderItemList.Add);
         }
 
-        public void AddNewDataPoints()
-        {
-            //Points.Clear();
-            //for (int i = 0; i < 20; i++)
-            //{
-            //    Points.Add(new DataPoint(10 + i, i * 10));
-            //}
-        }
+        #endregion
 
-    #endregion
-
-}
+    }
 }

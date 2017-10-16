@@ -1,4 +1,5 @@
 ﻿using OxyPlot;
+using OxyPlot.Series;
 using System;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -9,11 +10,16 @@ namespace Charts_MVVM
 {
     public class TextParcer
     {
-        public static ObservableCollection<DataPoint> s1pParcer(SourceItem file)
+        public static LineSeries s1pParcer(SourceItem file)
         {
             using (StreamReader folderFile = new StreamReader(file.Fullpath))
             {
-                var DataPoints = new ObservableCollection<DataPoint>();
+                // Creating series for chart
+                var lineSerie = new LineSeries
+                {
+                    Color = OxyColor.Parse("#117dbb"),
+                    Title = file.name
+                };
                 // Skiping first line
                 var line = folderFile.ReadLine();
                 // Reseter for counter .
@@ -27,13 +33,14 @@ namespace Charts_MVVM
                         double[] traceData = line.Split(new char[0], StringSplitOptions.RemoveEmptyEntries)
                             .Select(s => double.Parse(s, CultureInfo.InvariantCulture)).ToArray();
                         // Adding data points (x, y) for chart
-                        DataPoints.Add(new DataPoint(traceData[0] * Math.Pow(10, -6), 
+                        lineSerie.Points.Add(new DataPoint(traceData[0] * Math.Pow(10, -6), 
                                                      20 * Math.Log10(Math.Sqrt((Math.Pow(traceData[1], 2) + Math.Pow(traceData[2], 2))))));
                         counter1++;
                     }
                     counter++;
                 }
-                return DataPoints;
+                
+                return lineSerie;
             }
         }
 

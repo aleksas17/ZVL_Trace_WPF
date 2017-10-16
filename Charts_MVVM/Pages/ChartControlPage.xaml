@@ -39,20 +39,33 @@
         
         
         <!-- Chart Control -->
+        <!--<Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
 
-        <oxy:Plot  Style="{StaticResource oxyPlot_Style1}" Grid.Row="1" Title="{Binding ChartTitle}" Margin="20">
+            <oxy:Plot Style="{StaticResource oxyPlot_Style1}" Grid.Column="0" Title="{Binding ChartTitle}" Margin="20">
 
-            <oxy:Plot.Axes>
-                <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartYaxisTitle}" Position="Left"/>
-                <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartXaxisTitle}" Position="Bottom"/>
-            </oxy:Plot.Axes>
+                <oxy:Plot.Axes>
+                    <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartYaxisTitle}" Position="Left"/>
+                    <oxy:LinearAxis Style="{StaticResource oxyLinearAxis_Style1}" Title="{Binding ChartXaxisTitle}" Position="Bottom"/>
+                </oxy:Plot.Axes>
 
-            <oxy:Plot.Series>
-                <oxy:LineSeries Style="{StaticResource oxyLineSeries_Style1}" ItemsSource="{Binding Points}" Title="Dude"/>
-            </oxy:Plot.Series>
-            
-        </oxy:Plot>
+                <oxy:Plot.Series>
+                    <oxy:LineSeries Style="{StaticResource oxyLineSeries_Style1}" ItemsSource="{Binding Points}"/>
+                </oxy:Plot.Series>
 
+            </oxy:Plot>
+        </Grid>
+        -->
+
+        <oxy:PlotView Style="{StaticResource oxyPlotView_Style1}" Grid.Row="1" Model="{Binding ChartModel}" Margin="20">
+                
+        </oxy:PlotView>
+
+
+        
         
 
     </Grid>

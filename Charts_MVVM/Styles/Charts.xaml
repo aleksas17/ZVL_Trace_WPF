@@ -20,6 +20,53 @@
 
     <!-- Main chart area -->
 
+    <Style TargetType="oxy:PlotView" x:Key="oxyPlotView_Style1">
+
+        
+        <Setter Property="DefaultTrackerTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border>
+
+                        <Border.Effect>
+                            <DropShadowEffect BlurRadius="8" 
+                                              ShadowDepth="2.5" 
+                                              Direction="315" 
+                                              Color="#BBBBBB" 
+                                              Opacity="0.2" />
+                        </Border.Effect>
+
+                        <oxy:TrackerControl LineExtents="{Binding PlotModel.PlotArea}" Position="{Binding Position}" BorderThickness="1" BorderBrush="{StaticResource ChartForeGroundLightBlueBrush}" Background="#E5F3FB">
+                            <oxy:TrackerControl.Content>
+                                <Grid Margin="10">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <TextBlock Grid.Row="0" Text="{Binding Series.Title}" Foreground="{StaticResource ForeGroundDarkBrush}" FontFamily="Segoe UI Semilight" FontSize="14" />
+                                    <TextBlock Grid.Row="1" Grid.Column="0" Padding="0 0 5 0" Text="{Binding XAxis.Title}" Foreground="{StaticResource ForeGroundDarkBrush}" FontFamily="Segoe UI Semilight" FontSize="14" />
+                                    <TextBlock Grid.Row="1" Grid.Column="1" DockPanel.Dock="Right" Text="{Binding DataPoint.X, StringFormat='{}{0:0.00}'}" Foreground="{StaticResource ForeGroundDarkBrush}" FontFamily="Segoe UI Semibold" FontSize="14" />
+                                    <TextBlock Grid.Row="2" Grid.Column="0" Padding="0 0 5 0" Text="{Binding YAxis.Title}" Foreground="{StaticResource ForeGroundDarkBrush}" FontFamily="Segoe UI Semilight" FontSize="14" />
+                                    <TextBlock Grid.Row="2" Grid.Column="1" DockPanel.Dock="Right" Text="{Binding DataPoint.Y, StringFormat='{}{0:0.00}'}" Foreground="{StaticResource ForeGroundDarkBrush}" FontFamily="Segoe UI Semibold" FontSize="14" />
+
+                                </Grid>
+                            </oxy:TrackerControl.Content>
+                        </oxy:TrackerControl>
+
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style TargetType="oxy:Plot" x:Key="oxyPlot_Style1">
         <Setter Property="IsLegendVisible" Value="True"/>
         <Setter Property="LegendOrientation" Value="Horizontal"/>
@@ -114,7 +161,7 @@
     <Style TargetType="oxy:LineSeries" x:Key="oxyLineSeries_Style1">
         <Setter Property="MarkerType" Value="Circle"/>
         <Setter Property="MarkerFill" Value="{StaticResource BackgroundVeryLight}"/>
-        <Setter Property="MarkerSize" Value="4"/>
+        <Setter Property="MarkerSize" Value="0"/>
         <Setter Property="MarkerStroke" Value="#117dbb"/>
         <Setter Property="MarkerStrokeThickness" Value="1"/>
         <Setter Property="StrokeThickness" Value="1"/>
