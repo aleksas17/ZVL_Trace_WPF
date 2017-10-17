@@ -67,7 +67,7 @@ namespace Charts_MVVM
                 TitleFont = "Segeo UI Semilight",
                 TitleColor = OxyColor.Parse("#1e1e1e"),
                 TitleFontSize = 16,
-                FontWeight = OxyPlot.FontWeights.Normal,
+                FontWeight = FontWeights.Normal,
                 Font = "Segeo UI Semilight",
                 TextColor = OxyColor.Parse("#a6a6a6"),
                 FontSize = 16,
@@ -76,54 +76,7 @@ namespace Charts_MVVM
             };
             ChartModel.Axes.Add(lineAxesX);
 
-            // Text annotation that shows X cordanate for line annotation
-            var ta = new TextAnnotation
-            {
-                Background = OxyColor.Parse("#368632"),
-                StrokeThickness = 0
-            };
-
-
-
-            // Annotation line
-            var la = new LineAnnotation
-            {
-                Type = LineAnnotationType.Vertical,
-                X = 0,
-                Color = OxyColor.Parse("#368632")
-            };
-            la.MouseDown += (s, e) =>
-            {
-                if (e.ChangedButton != OxyMouseButton.Left)
-                {
-                    return;
-                }
-
-                la.StrokeThickness *= 5;
-                ChartModel.InvalidatePlot(false);
-                e.Handled = true;
-            };
-
-            // Handle mouse movements (note: this is only called when the mousedown event was handled)
-            la.MouseMove += (s, e) =>
-            {
-                la.X = la.InverseTransform(e.Position).X;
-                ta.TextPosition = new DataPoint(la.X, 60);
-                ta.Text = la.InverseTransform(e.Position).X.ToString();
-                ChartModel.InvalidatePlot(false);
-                e.Handled = true;
-            };
-            la.MouseUp += (s, e) =>
-            {
-                la.StrokeThickness /= 5;
-                ChartModel.InvalidatePlot(false);
-                e.Handled = true;
-                Debug.WriteLine(la.X);
-            };
-            ChartModel.Annotations.Add(la);
-            ChartModel.Annotations.Add(ta);
-
-
+            
             return ChartModel;
         }
     }
